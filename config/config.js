@@ -1,16 +1,16 @@
 // https://umijs.org/config/
 import { defineConfig } from 'umi';
 import { join } from 'path';
+
 import defaultSettings from './defaultSettings';
 import proxy from './proxy';
-import routes from './routes';
+import routes from './routes/index';
+
 const { REACT_APP_ENV } = process.env;
 export default defineConfig({
   hash: true,
   antd: {},
-  dva: {
-    hmr: true,
-  },
+  dva: { hmr: true },
   layout: {
     // https://umijs.org/zh-CN/plugins/plugin-layout
     locale: true,
@@ -25,18 +25,12 @@ export default defineConfig({
     // default true, when it is true, will use `navigator.language` overwrite default
     baseNavigator: true,
   },
-  dynamicImport: {
-    loading: '@ant-design/pro-layout/es/PageLoading',
-  },
-  targets: {
-    ie: 11,
-  },
+  dynamicImport: { loading: '@ant-design/pro-layout/es/PageLoading' },
+  targets: { ie: 11 },
   // umi routes: https://umijs.org/docs/routing
   routes,
   // Theme for antd: https://ant.design/docs/react/customize-theme-cn
-  theme: {
-    'root-entry-name': 'variable',
-  },
+  theme: { 'root-entry-name': 'variable' },
   // esbuild is father build tools
   // https://umijs.org/plugins/plugin-esbuild
   esbuild: {},
@@ -62,9 +56,7 @@ export default defineConfig({
       projectName: 'swagger',
     },
   ],
-  nodeModulesTransform: {
-    type: 'none',
-  },
+  nodeModulesTransform: { type: 'none' },
   mfsu: {},
   webpack5: {},
   exportStatic: {},
