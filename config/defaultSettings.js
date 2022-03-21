@@ -1,8 +1,7 @@
 const Settings = {
   navTheme: 'light',
-  // 拂晓蓝
-  primaryColor: '#1890ff',
-  layout: 'mix',
+  primaryColor: '#1890ff', // 拂晓蓝
+  layout: 'top',
   contentWidth: 'Fluid',
   fixedHeader: false,
   fixSiderbar: true,
@@ -12,4 +11,5 @@ const Settings = {
   logo: 'https://gw.alipayobjects.com/zos/rmsportal/KDpgvguMpGfqaHPjicRK.svg',
   iconfontUrl: '',
 };
+
 export default Settings;
