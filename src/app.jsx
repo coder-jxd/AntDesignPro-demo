@@ -2,7 +2,7 @@
 // https://umijs.org/zh-CN/config
 import { history, Link } from 'umi';
 import { BookOutlined, LinkOutlined } from '@ant-design/icons';
-import { PageLoading, SettingDrawer } from '@ant-design/pro-layout';
+import { PageLoading } from '@ant-design/pro-layout';
 
 import { currentUser as queryCurrentUser } from './services/ant-design-pro/api';
 import defaultSettings from '../config/defaultSettings';
@@ -73,23 +73,26 @@ export const layout = ({ initialState, setInitialState }) => {
     // 自定义 403 页面
     // unAccessible: <div>unAccessible</div>,
     // 增加一个 loading 的状态
-    childrenRender: (children, props) => {
-      // if (initialState?.loading) return <PageLoading />;
-      return (
-        <>
-          {children}
-          {!props.location?.pathname?.includes('/login') && (
-            <SettingDrawer
-              enableDarkTheme
-              settings={initialState?.settings}
-              onSettingChange={(settings) => {
-                setInitialState((preInitialState) => ({ ...preInitialState, settings }));
-              }}
-            />
-          )}
-        </>
-      );
-    },
+    // childrenRender: (children, props) => {
+    //   if (initialState?.loading) return <PageLoading />;
+    //   // SettingDrawer 可视化配置组件 
+    //   // from @ant-design/pro-layout
+    //   return (
+    //     <>
+    //       {children}
+    //       {!props.location?.pathname?.includes('/login') && (
+    //         <SettingDrawer
+    //           enableDarkTheme
+    //           settings={initialState?.settings}
+    //           onSettingChange={(settings) => {
+    //             setInitialState((preInitialState) => ({ ...preInitialState, settings }));
+    //           }}
+    //         />
+    //       )}
+    //     </>
+    //   );
+    // },
+    childrenRender: children => children,
     ...initialState?.settings,
   };
 };
