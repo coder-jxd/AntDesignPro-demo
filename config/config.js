@@ -13,7 +13,7 @@ export default defineConfig({
   dva: { hmr: true },
   layout: {
     // https://umijs.org/zh-CN/plugins/plugin-layout
-    locale: true,
+    locale: false,
     siderWidth: 208,
     ...defaultSettings,
   },
@@ -37,9 +37,7 @@ export default defineConfig({
   title: false,
   ignoreMomentLocale: true,
   proxy: proxy[REACT_APP_ENV || 'dev'],
-  manifest: {
-    basePath: '/',
-  },
+  manifest: { basePath: '/' },
   // Fast Refresh 热更新
   fastRefresh: {},
   openAPI: [
