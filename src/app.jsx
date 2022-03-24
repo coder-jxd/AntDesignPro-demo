@@ -4,6 +4,7 @@ import { history, Link } from 'umi';
 import { BookOutlined, LinkOutlined } from '@ant-design/icons';
 import { PageLoading } from '@ant-design/pro-layout';
 
+import RightContent from '@/components/RightContent';
 import { currentUser as queryCurrentUser } from './services/ant-design-pro/api';
 import defaultSettings from '../config/defaultSettings';
 
@@ -46,7 +47,7 @@ export async function getInitialState() {
 
 export const layout = ({ initialState, setInitialState }) => {
   return {
-    rightContentRender: () => false,
+    rightContentRender: () => <RightContent />,
     disableContentMargin: false,
     waterMarkProps: { content: initialState?.currentUser?.name },
     footerRender: () => false,
@@ -93,6 +94,6 @@ export const layout = ({ initialState, setInitialState }) => {
     //   );
     // },
     childrenRender: children => children,
-    ...initialState?.settings,
+    ...initialState?.settings
   };
 };
