@@ -34,9 +34,21 @@ export default [
     icon: 'AntDesign',
     routes: [
       {
-        name: 'ProTable',
         path: '/ant-design/protable',
+        name: 'ProTable',
         component: './AntDesign/TableList',
+      },
+    ],
+  },
+  {
+    path: '/ant-design-charts',
+    name: 'Ant Design Charts',
+    icon: 'AreaChart',
+    routes: [
+      {
+        path: '/ant-design-charts/column',
+        name: '柱状图',
+        component: './AntDesignCharts/ColumnChart',
       },
     ],
   },
