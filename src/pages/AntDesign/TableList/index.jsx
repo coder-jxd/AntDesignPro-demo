@@ -1,9 +1,10 @@
+// ProTable 基本使用
 import { PageContainer } from '@ant-design/pro-layout';
 import ProTable from '@ant-design/pro-table';
 
 import { getTableData } from '../service';
 
-export default () => {
+const TableList = () => {
     const columns = [
         {
             title: '序号',
@@ -49,3 +50,5 @@ export default () => {
         </PageContainer>
     );
 };
+
+export default TableList;
