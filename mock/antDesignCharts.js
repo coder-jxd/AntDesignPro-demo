@@ -35,7 +35,26 @@ export default {
       ],
     };
 
-    await waitTime(1500);
+    await waitTime(1000);
+    res.send(data);
+  },
+  // 饼图
+  'GET /api/pie': async (_, res) => {
+    const data = {
+      frontend: [
+        { type: 'HTML', value: 50 },
+        { type: 'CSS', value: 50 },
+        { type: 'JavaScript', value: 100 },
+        { type: 'TypeScript', value: 50 },
+      ],
+      framework: [
+        { type: 'React.js', value: 100 },
+        { type: 'Vue.js', value: 50 },
+        { type: 'TypeScript', value: 50 },
+      ],
+    };
+
+    await waitTime(1000);
     res.send(data);
   },
 };

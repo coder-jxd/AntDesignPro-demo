@@ -50,6 +50,11 @@ export default [
         name: '柱状图',
         component: './AntDesignCharts/ColumnChart',
       },
+      {
+        path: '/ant-design-charts/pie',
+        name: '饼图',
+        component: './AntDesignCharts/PieChart',
+      },
     ],
   },
   {
