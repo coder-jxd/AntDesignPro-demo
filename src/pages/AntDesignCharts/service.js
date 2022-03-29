@@ -9,3 +9,8 @@ export async function getColumnData(params) {
 export async function getPieData(params) {
   return request('/api/pie', { params });
 }
+
+// 地图数据
+export async function getChinaData(params) {
+  return request('/api/china', { params });
+}

@@ -55,6 +55,11 @@ export default [
         name: '饼图',
         component: './AntDesignCharts/PieChart',
       },
+      {
+        path: '/ant-design-charts/china-map',
+        name: '中国地图',
+        component: './AntDesignCharts/ChinaMap',
+      },
     ],
   },
   {
