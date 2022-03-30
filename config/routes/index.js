@@ -11,20 +11,15 @@ export default [
     component: './Welcome',
   },
   {
-    path: '/admin',
-    name: '管理页',
+    path: '/umijs',
+    name: 'UmiJS',
     icon: 'crown',
-    access: 'canAdmin',
-    component: './Admin',
     routes: [
       {
-        path: '/admin/sub-page',
-        name: '二级管理页',
-        icon: 'smile',
-        component: './Welcome',
-      },
-      {
-        component: './404',
+        path: '/umijs/plugin-access',
+        name: '管理页',
+        access: 'canAdmin',
+        component: './UmiJS/PluginAccess',
       },
     ],
   },
