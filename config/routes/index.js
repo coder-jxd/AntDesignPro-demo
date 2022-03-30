@@ -21,6 +21,11 @@ export default [
         access: 'canAdmin',
         component: './UmiJS/PluginAccess',
       },
+      {
+        path: '/umijs/plugin-dva',
+        name: 'dva 同步操作',
+        component: './UmiJS/PluginDva',
+      },
     ],
   },
   {
