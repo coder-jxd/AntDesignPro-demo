@@ -22,9 +22,9 @@ export default [
         component: './UmiJS/PluginAccess',
       },
       {
-        path: '/umijs/plugin-dva',
+        path: '/umijs/plugin-dva/sync',
         name: 'dva 同步操作',
-        component: './UmiJS/PluginDva',
+        component: './UmiJS/PluginDva/Sync',
       },
     ],
   },
