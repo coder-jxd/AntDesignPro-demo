@@ -26,6 +26,11 @@ export default [
         name: 'dva 同步操作',
         component: './UmiJS/PluginDva/Sync',
       },
+      {
+        path: '/umijs/plugin-dva/async',
+        name: 'dva 异步操作',
+        component: './UmiJS/PluginDva/Async',
+      },
     ],
   },
   {

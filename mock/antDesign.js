@@ -1,6 +1,14 @@
+const waitTime = (time = 100) => {
+  return new Promise((resolve) => {
+    setTimeout(() => {
+      resolve(true);
+    }, time);
+  });
+};
+
 export default {
   // 表格数据
-  'GET /api/tabledata': (_, res) => {
+  'GET /api/tabledata': async (_, res) => {
     const data = {
       current: 1,
       data: [
@@ -37,6 +45,7 @@ export default {
       ],
     };
 
+    await waitTime(1000);
     res.send(data);
   },
 };
